@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'next/link'
 
-function IndexPage() {
+function SamplePage() {
   return (
     <div>
-      <h1>Index page CS</h1>
+      <h1>Sample page CS</h1>
       <p><Link href='/'><a>index</a></Link></p>
       <p><Link href='/cs/'><a>cs index</a></Link></p>
       <p><Link href='/cs/sample'><a>cs sample</a></Link></p>
@@ -13,4 +13,4 @@ function IndexPage() {
   )
 }
 
-export default IndexPage
+export default SamplePage
