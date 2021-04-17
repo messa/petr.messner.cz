@@ -24,3 +24,8 @@ jobs:
     - run: npm run build
     - run: npm run export
     - run: tree -ah out
+
+  deploy:
+    needs: [build]
+    steps:
+    - run: ls -lah
