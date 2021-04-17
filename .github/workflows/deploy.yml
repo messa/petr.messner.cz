@@ -23,7 +23,6 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run export
-    - run: tree -ah out
     - name: Upload exported static site
       uses: actions/upload-artifact@v2
       with:
@@ -40,7 +39,6 @@ jobs:
       with:
         name: export
         path: out
-    - run: tree -ah
     - run: aws --version
     - name: aws s3 sync
       env:
@@ -48,4 +46,4 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.DEPLOY_AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.DEPLOY_AWS_SECRET_ACCESS_KEY }}
       working-directory: out
-      run: aws s3 sync . s3://messa-websites/petr.messner.cz/
+      run: aws s3 sync --acl public-read . s3://messa-websites/petr.messner.cz/
