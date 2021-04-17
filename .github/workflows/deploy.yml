@@ -40,4 +40,5 @@ jobs:
       with:
         name: export
         path: out
-    - run: ls -lah
+    - run: tree -ah
+    - run: aws s3 sync --dryrun out s3://messa-websites/petr.messner.cz/
