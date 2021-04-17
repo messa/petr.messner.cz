@@ -10,10 +10,10 @@ on:
     branches: [ main ]
 
 jobs:
+
   build:
 
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js $14.x
@@ -26,6 +26,8 @@ jobs:
     - run: tree -ah out
 
   deploy:
+
     needs: [build]
+    runs-on: ubuntu-latest    
     steps:
     - run: ls -lah
