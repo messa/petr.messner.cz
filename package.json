@@ -1,0 +1,19 @@
+{
+  "name": "petr.messner.cz",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/messa/petr.messner.cz.git"
+  },
+  "author": "Petr Messner",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/messa/petr.messner.cz/issues"
+  },
+  "homepage": "https://github.com/messa/petr.messner.cz#readme"
+}
