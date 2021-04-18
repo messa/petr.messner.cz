@@ -4,10 +4,11 @@ import Link from 'next/link'
 function IndexPage() {
   return (
     <div>
-      <h1>Index page</h1>
-      <p><Link href='/cs/'><a>cs index</a></Link></p>
-      <p><Link href='/cs/sample'><a>cs sample</a></Link></p>
-      <p><Link href='/en/'><a>en index</a></Link></p>
+      <p style={{ textAlign: 'center', fontSize: '200%', padding: '40px' }}>
+        <Link href='/cs/'><a>česky</a></Link>
+        {' · '}
+        <Link href='/en/'><a>english</a></Link>
+      </p>
     </div>
   )
 }
